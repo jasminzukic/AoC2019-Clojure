@@ -26,3 +26,10 @@
        io/resource
        slurp
        str/split-lines))
+
+(defn get-content
+  [file-name]
+  (->> file-name
+       (str "inputs/")
+       io/resource
+       slurp))
